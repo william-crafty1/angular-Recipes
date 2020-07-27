@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-display.component.css']
 })
 export class MainDisplayComponent implements OnInit {
+  searchList = false;
 
   constructor() { }
 

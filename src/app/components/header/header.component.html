@@ -1,3 +1,43 @@
-<div class="header">
-    
+<nav class="navbar navbar-expand-lg navbar-light" id="header-nav">
+    <button 
+        class="navbar-toggler" 
+        type="button" 
+        (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <a class="navbar-brand" routerLink="">
+        The Idiot Sandwich
+        <img src="https://i.ibb.co/F4MDzfW/bread-plain.png" alt="bread-plain" border="0" height="60px">
+    </a>
+
+    <div 
+        class="collapse navbar-collapse" 
+        id="navbarTogglerDemo03"
+        [ngClass]="{ 'show': navbarOpen }">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/about-the-idiot-sandwich']">About The Idiot Sandwich</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/favorite-recipes']">Favorite Recipes</a>
+        </li>
+        <li class="nav-item">
+        <a  class="nav-link" id="navLink-search" (click)="onToggleThought()">Search</a>
+        </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+    <a class="nav-link"
+    (click)="onToggleThought()">
+        <span class="material-icons search">search</span>
+    </a>
+    </form>
+    </div>
+</nav>
+<div class="search-list">
+    <app-search-form
+    *ngIf="thoughtForm"></app-search-form>
 </div>
+
+
+<router-outlet></router-outlet>

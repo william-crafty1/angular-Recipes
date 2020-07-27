@@ -1,0 +1,29 @@
+.search-input { 
+    padding-top: 10px;
+}
+
+.search-dropdown { 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* the health label dropdowns */
+.form-group { 
+    width: 75%;
+}
+
+@media (min-width: 992px) { 
+    .search-dropdown { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 10px 50px;
+    }
+
+    .form-group { 
+        width: 75%;
+        padding: 0 15px;
+    }
+} 
