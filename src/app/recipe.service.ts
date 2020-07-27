@@ -9,78 +9,20 @@ import { Observable } from 'rxjs';
 export class RecipeService {
 
     recipes: any;
-    apiKey = '305f31f55a51a74e251a32a89c7ac20c';
-    appId = 'fe34feed';
 
     constructor(private http: HttpClient){
 
     }
 
     getRecipes(data: any): Observable<any>{
-        data.app_key = this.apiKey;
-        data.app_id = this.appId;
-        // data = {p: 'serachstring', api_key: 'whatever'}
-        return this.http.get('https://api.edamam.com/search', {params: data}); // https://api.edamam.com/serach?p=searchstring&api_key=jasdlkfj
-    }
-}
+      const parameters = {
+        app_key: '284ef404822101158223b8d34e979603',
+        app_id: '650ae839',
+        q: data.q ? data.q : '',
+        health: data.health ? data.health : '',
+        diet: data.diet ? data.diet : '', 
 
-//     AppService($location, $http) {
-//     const self = this;
-//     const key = "305f31f55a51a74e251a32a89c7ac20c";
-//     const appID = "fe34feed";    
-//     const healthSearch = ["vegan", "peanut-free"] // array for the health filter option
-//     const dietSearch = ["high-protein", "low-carb", "low-fat"] //array for the diet filter options
-//     self.faveArray = []; //array where foods that are faved are pushed
-//     self.loadCount = 4;
-//     self.outterInput;
-//     self.outterHealth;
-//     self.outterDiet;
-//     self.Search = function(input, id, idx) {
-//     self.outterInput = input;
-//     self.outterHealth = id;
-//     self.outterDiet = idx;
-//         self.health = (id ? "&health=" + healthSearch[Number(id)] : "" ); //If-else statement that governs empty filter options
-//         self.diet   = (idx ? "&diet="  +  dietSearch[Number(idx)] : "" );
-//         //search function and http req.
-//         $location.path("/recipeList");
-//         self.data =  $http.get("https://api.edamam.com/search?q="+input+"&from=0&to="+self.loadCount+"&app_id="+appID+"&app_key="+key+self.health+self.diet);
-//     }
-//         //returns the promise, that is stored in the variable
-//         self.Get = () => {
-//             return self.data;
-//         }
-//         //this checks to see if an item exists in our faveArray, prior to pushing it - pushes one of each item
-//         self.addFave = (item) => {
-//             for(let i = 0; i < self.faveArray.length; i++){
-//                 if(item == self.faveArray[i]){
-//                     return;                }
-//             }
-//             self.faveArray.push(item)
-//         }
-//         //returns fave array
-//         self.getFave = () => {
-//             return self.faveArray;
-//         }
-//         //deletes an item from fave array
-//         self.deleteFave = (newArray) => {
-//             self.faveArray = newArray;
-//         }
-//         //allows user to delete from array while navigating the initial search results by on/off click of favorite icon
-//         self.deleteTempFav = (item) => {
-//             for(let i = 0; i < self.faveArray.length; i++){
-//                 if(item == self.faveArray[i]){
-//                     self.faveArray.splice(i, 1);
-//                 }
-//             }
-//         }
-//         //Adjust the load property to load more on click of the load more button
-//         self.loadMore = () => {
-//             self.loadCount = self.loadCount + 4;
-//             console.log(self.loadCount);
-//             self.Search(self.outterInput, self.outterHealth, self.outterDiet);
-//         }
-//         self.resetCount = (num) => {
-//             self.loadCount = num;
-//         }
-//     }
-// angular.module("App").service("AppService", AppService);
+      }
+        return this.http.get('https://api.edamam.com/search', {params: parameters});
+    }
+  }

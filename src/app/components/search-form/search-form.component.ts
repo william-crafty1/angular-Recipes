@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/recipe.service';
 
 @Component({
   selector: 'app-search-form',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
   }
 
+  recipeFormSubmitted(data: any) {
+    const recipeSerach: any = {
+      q: data.q,
+      health: data.health,
+      diet: data.diet,
+    };
+
+    this.recipeService.getRecipes(recipeSerach).subscribe((data: any) => {
+      this.recipeService.recipes = data._embedded.recipes;
+    });
+
+    console.log(data);
+
+  }
 }
