@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchFormComponent } from './components/search-form/search-form.component';
 import { MainDisplayComponent } from './components/main-display/main-display.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FavoritesComponent } from './components/favorites/favorites.component';
     HeaderComponent,
     SearchFormComponent,
     MainDisplayComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

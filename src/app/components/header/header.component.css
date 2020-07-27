@@ -1,0 +1,64 @@
+.bread-logo { 
+    height: 200px;
+}
+
+.navbar-brand { 
+    font-size: 25px;
+}
+
+/* the main nav bar */
+#header-nav { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav-toggle { 
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ECCABA;
+    margin-bottom: 8px;
+}
+
+.nav-link { 
+    color: black;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/* search icon */
+.material-icons.search { 
+    display: none;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) { 
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    #navLink-search { 
+        display: none;
+    }
+    .material-icons.search { 
+        display: contents;
+        font-size: 35px;
+    }
+    .navbar-brand { 
+        font-size: 35px;
+    }
+} 
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+}
+
