@@ -1,30 +1,32 @@
 <div class="container">
   <form class="search-input" #recipeForm="ngForm" (submit)="recipeFormSubmitted(recipeForm.value)">
     <div class="input-group mb-3 search-input">
-      <input type="text" name="q" class="form-control" placeholder="Search" ngModel>
+      <input type="text" name="q" class="form-control" placeholder="What type of dish?" ngModel>
 
-      <!-- <div class="search-dropdown">
+      <div class="search-dropdown">
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Diet Label</label>
-          <select class="form-control" id="exampleFormControlSelect1" ngModel>
-            <option>Low Fat</option>
-            <option>2</option>
-            <option>3</option>
+          <label for="exampleFormControlSelect1">Health Type</label>
+          <select class="form-control" name="health" id="exampleFormControlSelect1" ngModel>
+            <option>peanut-free</option>
+            <option>vegan</option>
+            <option>vegetarian</option>
+            <option>alcohol-free</option>
           </select>
         </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">Health Label</label>
-          <select class="form-control" id="exampleFormControlSelect1" ngModel>
-            <option>Peanut Free</option>
-            <option>2</option>
-            <option>3</option>
+          <label for="exampleFormControlSelect1">Diet Type</label>
+          <select class="form-control" name="diet" id="exampleFormControlSelect1" ngModel>
+            <option>low-fat</option>
+            <option>high-protein</option>
+            <option>balanced</option>
+            <option>low-carb</option>
           </select>
         </div>
-      </div> -->
+      </div>
 
-      <h6 style="text-align: center; padding-bottom: 25px;">CLEAR ALL</h6>
+      <!-- <h6 style="text-align: center; padding-bottom: 25px;">CLEAR ALL</h6> -->
       <div class="input-group-btn">
-        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i>Submit</button>
       </div>
     </div>
   </form>
