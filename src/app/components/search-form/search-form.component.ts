@@ -8,6 +8,8 @@ import { RecipeService } from 'src/app/recipe.service';
 })
 export class SearchFormComponent implements OnInit {
 
+  recipes: any = [];
+
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
@@ -16,15 +18,15 @@ export class SearchFormComponent implements OnInit {
   recipeFormSubmitted(data: any) {
     const recipeSerach: any = {
       q: data.q,
-      health: data.health,
-      diet: data.diet,
+      health: 'peanut-free',
+      diet: 'low-fat',
     };
 
     this.recipeService.getRecipes(recipeSerach).subscribe((data: any) => {
-      this.recipeService.recipes = data._embedded.recipes;
+      this.recipeService.recipes = data.hits.recipes;
+      console.log(data);
     });
 
-    console.log(data);
 
   }
 }

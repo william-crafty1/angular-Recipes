@@ -1,12 +1,13 @@
 <div class="container">
   <form class="search-input" #recipeForm="ngForm" (submit)="recipeFormSubmitted(recipeForm.value)">
     <div class="input-group mb-3 search-input">
-      <input type="text" class="form-control" placeholder="Search" ngModel>
+      <input type="text" name="q" class="form-control" placeholder="Search" ngModel>
+
       <!-- <div class="search-dropdown">
         <div class="form-group">
           <label for="exampleFormControlSelect1">Diet Label</label>
           <select class="form-control" id="exampleFormControlSelect1" ngModel>
-            <option>1</option>
+            <option>Low Fat</option>
             <option>2</option>
             <option>3</option>
           </select>
@@ -14,7 +15,7 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1">Health Label</label>
           <select class="form-control" id="exampleFormControlSelect1" ngModel>
-            <option>1</option>
+            <option>Peanut Free</option>
             <option>2</option>
             <option>3</option>
           </select>

@@ -23,8 +23,8 @@ export class AppComponent implements OnInit {
     });
   }
 
-  getRecipes(){
-    console.log(this.service.recipes);
-    return this
-  }
+  // getRecipes(){
+  //   console.log(this.service.recipes);
+  //   return this
+  // }
 }

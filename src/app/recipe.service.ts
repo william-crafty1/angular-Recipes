@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class RecipeService {
 
-    recipes: any;
+    recipes: any = [];
 
     constructor(private http: HttpClient){
 
@@ -16,12 +16,9 @@ export class RecipeService {
 
     getRecipes(data: any): Observable<any>{
       const parameters = {
-        app_key: '284ef404822101158223b8d34e979603',
+        q: data.q,
         app_id: '650ae839',
-        q: data.q ? data.q : '',
-        health: data.health ? data.health : '',
-        diet: data.diet ? data.diet : '', 
-
+        app_key: '284ef404822101158223b8d34e979603'
       }
         return this.http.get('https://api.edamam.com/search', {params: parameters});
     }
