@@ -2,5 +2,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
+}
+
+.about-paragraphs{
+    padding: 10px;
+    margin-top: 10px;
+}
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.Ramsay {
+    margin: 10px;
+    width: 500px;
+    height: 300px;
+}
+
+.closing {
+    border-bottom: silver solid 3px;
 }

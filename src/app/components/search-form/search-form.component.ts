@@ -16,14 +16,15 @@ export class SearchFormComponent implements OnInit {
   }
 
   recipeFormSubmitted(data: any) {
-    const recipeSerach: any = {
+    const recipeSearch: any = {
       q: data.q,
       health: data.health,
       diet: data.diet
     };
 
-    this.recipeService.getRecipes(recipeSerach).subscribe((data: any) => {
-      this.recipeService.recipes = data.hits.recipes;
+    this.recipeService.getRecipes(recipeSearch).subscribe((data: any) => {
+      // this.recipeService.recipes = data.hits.recipes;
+      data.filter(recipeSearch);
       console.log(data);
     });
 
