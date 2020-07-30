@@ -2,28 +2,21 @@
     padding-top: 10px;
 }
 
-.search-dropdown { 
+.input-group.mb-3.search-input { 
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
 }
 
-/* the health label dropdowns */
-.form-group { 
-    width: 75%;
+.form-control,
+.form-group.col-mod {
+    width: 100%;
+    padding: 15px;
 }
 
-@media (min-width: 992px) { 
-    .search-dropdown { 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 10px 50px;
-    }
-
-    .form-group { 
-        width: 75%;
-        padding: 0 15px;
-    }
-} 
+/* the health label dropdowns */
+/* .form-group { 
+    width: 75%;
+} */
