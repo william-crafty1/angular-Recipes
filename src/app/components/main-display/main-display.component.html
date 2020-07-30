@@ -13,17 +13,10 @@
 </div>
 <div class="container recipes">     
     <div class="row">
-      <div class="col-md-4" >
-          <img src="https://images.pexels.com/photos/1998633/pexels-photo-1998633.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="choc mousse" style="width:100%">  
-          <h5>Chocolate Is A Meal</h5>
-      </div>
-        <div class="col-md-4" >
-          <img src="https://images.pexels.com/photos/4197823/pexels-photo-4197823.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" style="width:100%">  
-          <h5>Literally Just Lemons</h5>
-      </div>
-        <div class="col-md-4" >
-          <img src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" alt="" style="width:100%">  
-          <h5>1-Ingredient Pizza</h5>
+      <div class="col-md-4" *ngFor="let recipe of getRecipes()">
+          <img [src]="recipe.recipe.image" alt= "recipeImage" style="width:100%">  
+          <h5>{{recipe.recipe.label}}</h5>
+          <a [href]="recipe.recipe.url">Click</a>
       </div>
     </div>
   </div>

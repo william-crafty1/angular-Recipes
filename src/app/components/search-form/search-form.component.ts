@@ -8,24 +8,20 @@ import { RecipeService } from 'src/app/recipe.service';
 })
 export class SearchFormComponent implements OnInit {
 
-  recipes: any = [];
-
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
   }
 
-  recipeFormSubmitted(data: any) {
+  recipeFormSubmitted(formData: any) {
     const recipeSearch: any = {
-      q: data.q,
-      health: data.health,
-      diet: data.diet
+      q: formData.q,
+      diet: formData.diet
     };
 
     this.recipeService.getRecipes(recipeSearch).subscribe((data: any) => {
-      // this.recipeService.recipes = data.hits.recipes;
-      data.filter(recipeSearch);
-      console.log(data);
+      const recipeArrayDiet = data.hits.filter(recipe => recipe.recipe.dietLabels.includes(formData.diet));
+      this.recipeService.recipes =  recipeArrayDiet;
     });
 
 

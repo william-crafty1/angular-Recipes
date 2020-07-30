@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RecipeService } from 'src/app/recipe.service';
 
 @Component({
   selector: 'app-main-display',
@@ -8,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class MainDisplayComponent implements OnInit {
   searchList = false;
 
-  constructor() { }
+  constructor(private recipeService : RecipeService) { }
 
   ngOnInit(): void {
+  }
+
+  getRecipes(){
+    console.log(this.recipeService.recipes);
+    return this.recipeService.recipes
   }
 
 }
