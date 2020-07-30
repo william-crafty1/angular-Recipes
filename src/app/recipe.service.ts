@@ -19,7 +19,7 @@ export class RecipeService {
         q: data.q,
         app_id: '650ae839',
         app_key: '284ef404822101158223b8d34e979603',
-        to: '20'
+        to: '100'
       }
       const returnRecipes = this.http.get('https://api.edamam.com/search', {params: parameters});
       return returnRecipes

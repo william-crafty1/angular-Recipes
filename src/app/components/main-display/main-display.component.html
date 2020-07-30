@@ -14,9 +14,9 @@
 <div class="container recipes">     
     <div class="row">
       <div class="col-md-4" *ngFor="let recipe of getRecipes()">
-          <img [src]="recipe.recipe.image" alt= "recipeImage" style="width:100%">  
+          <img class="recipe-image" [src]="recipe.recipe.image" alt= "recipeImage" style="width:100%">  
           <h5>{{recipe.recipe.label}}</h5>
-          <a [href]="recipe.recipe.url">Click</a>
+          <a class="recipe-link" [href]="recipe.recipe.url">Click for full recipe</a>
       </div>
     </div>
   </div>

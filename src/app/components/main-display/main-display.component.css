@@ -25,3 +25,20 @@ p {
     font-style: italic;
     font-weight: 100;
 }
+
+/*Recipe Link*/
+.recipe-image{
+    margin-top: 20px;
+}
+
+/*Recipe Link*/
+.recipe-link {
+    text-decoration: none;
+    color: silver;
+}
+
+.recipe-link:hover {
+    color: slateblue;
+}
+
+
