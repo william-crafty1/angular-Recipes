@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class RecipeService {
 
     recipes: any = [];
+    favoriteRecipes: any = [];
 
     constructor(private http: HttpClient){
 
