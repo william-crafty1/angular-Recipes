@@ -1,24 +1,32 @@
+<div *ngIf="!showDetail">
 <app-header></app-header>
-<div class="container">     
-    <div class="row">
-        <app-search-form
-        *ngIf="searchList">
-        </app-search-form>
-    </div>
+<div class="container">
+  <div class="row">
+    <app-search-form *ngIf="searchList">
+    </app-search-form>
+  </div>
 </div>
+
 
 <div class="container">
   <h4>Featured Recipes</h4>
   <p>"For what we are about to eat, may the Lord make us truly not vomit."</p>
 </div>
-<div class="container recipes">     
-    <div class="row">
-      <div class="col-md-4" *ngFor="let recipe of getRecipes()">
-          <img class="recipe-image" [src]="recipe.recipe.image" alt= "recipeImage" style="width:100%">  
-          <h5>{{recipe.recipe.label}}</h5>
-          <a class="recipe-link" [href]="recipe.recipe.url">Click for full recipe</a>
-      </div>
+
+<div class="container recipes">
+  <div class="row">
+    <div class="col-md-4" *ngFor="let recipe of getRecipes()">
+      <img class="recipe-image" [src]="recipe.recipe.image" alt="recipeImage" style="width:100%"
+        (click)="displayDetail(recipe)">
+      <h5>{{recipe.recipe.label}}</h5>
+      <a class="recipe-link" [href]="recipe.recipe.url">Click for full recipe</a>
+      <button (click)="addFavorites(recipe)"><span class="material-icons">favorite</span></button>
     </div>
   </div>
+</div>
+</div>
 
-
+<div *ngIf="showDetail"> 
+  <button (click)="showDetail = false">X</button>
+  <p>{{ selectedRecipe.label }}</p>
+</div>
