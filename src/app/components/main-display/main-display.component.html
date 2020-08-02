@@ -19,6 +19,7 @@
       <img class="recipe-image" [src]="recipe.recipe.image" alt="recipeImage" style="width:100%"
         (click)="displayDetail(recipe)">
       <h5>{{recipe.recipe.label}}</h5>
+
       <div class="recipe-text">
         <a class="recipe-link" [href]="recipe.recipe.url">Click for full recipe</a>
       <a class="heart icon" title="Heart" (click)="addFavorites(recipe)"> </a>
@@ -27,6 +28,7 @@
   </div>
 </div>
 </div>
+
 
 <div *ngIf="showDetail" class="recipe-container"> 
   <button (click)="showDetail = false">X</button>
@@ -51,5 +53,4 @@
     </div>
     <div class="card-shadow"></div>
   </div>
-
 </div>

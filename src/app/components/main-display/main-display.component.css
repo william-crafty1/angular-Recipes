@@ -36,6 +36,7 @@ p {
 
 /*Recipe Link*/
 .recipe-link {
+
   text-decoration: none;
   color: silver;
   padding-top: 15px;
@@ -52,6 +53,7 @@ p {
   justify-content: center;
   flex-direction: row;
 }
+
 
 a.icon {
   margin: 12px;
@@ -185,6 +187,7 @@ a.heart:before {
 .card-media {
   float: center;
 }
+
 
 .card-shadow {
   background-color: #fff;
