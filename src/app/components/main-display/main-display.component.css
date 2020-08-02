@@ -35,10 +35,18 @@ p {
 .recipe-link {
     text-decoration: none;
     color: silver;
+    margin-right: 10px;
 }
 
 .recipe-link:hover {
     color: slateblue;
+}
+
+/*Favorite Link*/
+.favorite-button {
+    background: none;
+    border: none;
+    color: #ff615d;
 }
 
 

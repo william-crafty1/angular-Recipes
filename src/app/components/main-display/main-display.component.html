@@ -20,7 +20,7 @@
         (click)="displayDetail(recipe)">
       <h5>{{recipe.recipe.label}}</h5>
       <a class="recipe-link" [href]="recipe.recipe.url">Click for full recipe</a>
-      <button (click)="addFavorites(recipe)"><span class="material-icons">favorite</span></button>
+      <button class="favorite-button" (click)="addFavorites(recipe)"><span class="material-icons">favorite</span></button>
     </div>
   </div>
 </div>
