@@ -18,8 +18,8 @@ export class RecipeService {
     getRecipes(data: any): Observable<any>{
       const parameters = {
         q: data.q,
-        app_id: '650ae839',
-        app_key: '284ef404822101158223b8d34e979603',
+        app_id: 'fe34feed',
+        app_key: '305f31f55a51a74e251a32a89c7ac20c',
         to: '100'
       }
       const returnRecipes = this.http.get('https://api.edamam.com/search', {params: parameters});
