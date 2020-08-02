@@ -11,7 +11,11 @@ export class FavoritesComponent implements OnInit {
   constructor(private recipeService: RecipeService) { }
 
   ngOnInit(): void {
+
   }
 
+  getFavoriteRecipes() { 
+    return this.recipeService.favoriteRecipes;
+  }
 
 }

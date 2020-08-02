@@ -8,6 +8,7 @@
 
 /* the main nav bar */
 #header-nav { 
+    font-family: 'Amatic SC', cursive;
     display: flex;
     flex-direction: row;
     align-items: center;

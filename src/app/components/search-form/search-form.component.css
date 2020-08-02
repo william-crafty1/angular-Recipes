@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+
 .search-input { 
     padding-top: 10px;
+    font-family: 'Amatic SC', cursive;
 }
 
 .input-group.mb-3.search-input { 
@@ -17,6 +20,7 @@
 }
 
 .btn.btn-primary { 
+    font-family: 'Amatic SC', cursive;
     border: 1px solid silver;
     background-color: silver;
     color: black;

@@ -1,4 +1,5 @@
 .about-container { 
+    font-family: 'Amatic SC', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
