@@ -49,4 +49,12 @@ p {
     color: #ff615d;
 }
 
+/*Hide Detail button*/
+.hide-detail {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 30px;
+}
+
 

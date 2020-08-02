@@ -27,6 +27,6 @@
 </div>
 
 <div *ngIf="showDetail"> 
-  <button (click)="showDetail = false">X</button>
+  <button class="hide-detail" (click)="showDetail = false"><i class="far fa-times-circle"></i></button>
   <p>{{ selectedRecipe.label }}</p>
 </div>
