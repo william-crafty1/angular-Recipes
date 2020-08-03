@@ -1,8 +1,10 @@
 <div *ngIf="!showDetail">
     <app-header></app-header>
     <div class="container">
+        <div><h1>Favorite Recipes</h1></div>
         <div class="row">
-            <div *ngFor="let favorite of getFavoriteRecipes(favorite)">
+            
+            <div class="col-xs-6 col-md-4" *ngFor="let favorite of getFavoriteRecipes(favorite)">
                 <img class="recipe-image" [src]="favorite.recipe.image" alt="recipeImage" width = "300px" height= "200px"
                     (click)="displayDetail(favorite)">
                 <h5>{{favorite.recipe.label}}</h5>

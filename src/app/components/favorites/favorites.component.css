@@ -1,177 +1,189 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
-body { 
-    font-family: 'Amatic SC', cursive;
+.container {
+  font-family: "Amatic SC", cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.col-xs-6,
+.col-md-4 {
+  text-align: center;
+}
+
+h5 {
+  padding-top: 10px;
 }
 
 /*Recipe Link*/
 .recipe-image {
-    margin-top: 20px;
-  }
-  
-  /*Recipe Link*/
-  .recipe-link {
-    text-decoration: none;
-    color: silver;
-    padding-top: 15px;
-    margin-right: 10px;
-  }
-  
-  .recipe-link:hover {
-    color: slateblue;
-  }
-  
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/*Recipe Link*/
+.recipe-link {
+  text-decoration: none;
+  color: silver;
+  padding-top: 15px;
+  margin-right: 10px;
+}
+
+.recipe-link:hover {
+  color: slateblue;
+}
 
 /* recipe title and fav link */
 .recipe-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-  }
-  
-  a.icon {
-    margin: 12px;
-    background-color: #fed;
-    border: 2px solid #fc6;
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-  }
-  a.icon:after,
-  a.icon:before {
-    background: #fed;
-    border: 2px solid #fc6;
-    content: "";
-    position: absolute;
-  }
-  a.icon:hover,
-  a.icon:hover:after,
-  a.icon:hover:before {
-    background-color: #ffe;
-  }
-  /* Heart Icon */
-  a.heart {
-    border-radius: 100%;
-    height: 15px;
-    margin-right: 24px;
-    width: 15px;
-    color: burlywood;
-  }
-  a.heart:after {
-    border-radius: 100%;
-    height: 15px;
-    left: 11px;
-    top: -2px;
-    width: 15px;
-    z-index: -1;
-    color: burlywood;
-  }
-  a.heart:before {
-    border-left: none;
-    border-top: none;
-    height: 16px;
-    left: 5px;
-    top: 6px;
-    width: 16px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    color: burlywood;
-  }
-  
-  /* recipe card */
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-  .u-clearfix:before,
-  .u-clearfix:after {
-    content: " ";
-    display: table;
-  }
-  .u-clearfix:after {
-    clear: both;
-  }
-  .u-clearfix {
-    *zoom: 1;
-  }
-  .subtle {
-    color: #aaa;
-  }
-  .card-container {
-    margin: 25px auto 0;
-    position: relative;
-    width: 400px;
-  }
-  .card {
-    background-color: #fff;
-    padding: 30px;
-    position: relative;
-    box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
-    z-index: 1;
-  }
-  .card-body {
-    display: inline-block;
-    width: 310px;
-  }
-  .card-author {
-    display: block;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    margin: 15px 0 0;
-    text-transform: uppercase;
-  }
-  .card-title {
-    font-family: "Amatic SC", cursive;
-    font-size: 60px;
-    font-weight: 300;
-    line-height: 60px;
-    margin: 10px 0;
-  }
-  .card-description {
-    display: inline-block;
-    font-weight: 300;
-    line-height: 22px;
-    margin: 10px 0;
-  }
-  .card-read {
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin: 5px 0 25px;
-    position: relative;
-    text-align: right;
-    text-transform: uppercase;
-  }
-  .card-read:after {
-    background-color: #b8bddd;
-    content: "";
-    display: block;
-    height: 1px;
-    position: absolute;
-    top: 9px;
-    width: 75%;
-  }
-  .card-tag {
-    float: right;
-    margin: 5px 0 0;
-  }
-  .card-media {
-    float: center;
-  }
-  
-  .card-shadow {
-    background-color: #fff;
-    box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
-      0 0 100px 3px rgba(0, 0, 0, 0.25);
-    height: 1px;
-    margin: -1px auto 0;
-    width: 80%;
-    z-index: -1;
-  }
-  
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+a.icon {
+  margin: 12px;
+  background-color: #fed;
+  border: 2px solid #fc6;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+a.icon:after,
+a.icon:before {
+  background: #fed;
+  border: 2px solid #fc6;
+  content: "";
+  position: absolute;
+}
+a.icon:hover,
+a.icon:hover:after,
+a.icon:hover:before {
+  background-color: #ffe;
+}
+/* Heart Icon */
+a.heart {
+  cursor: pointer;
+  border-radius: 100%;
+  height: 15px;
+  margin-right: 24px;
+  width: 15px;
+  color: burlywood;
+}
+a.heart:after {
+  border-radius: 100%;
+  height: 15px;
+  left: 11px;
+  top: -2px;
+  width: 15px;
+  z-index: -1;
+  color: burlywood;
+}
+a.heart:before {
+  border-left: none;
+  border-top: none;
+  height: 16px;
+  left: 5px;
+  top: 6px;
+  width: 16px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  color: burlywood;
+}
+
+/* recipe card */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+.u-clearfix:before,
+.u-clearfix:after {
+  content: " ";
+  display: table;
+}
+.u-clearfix:after {
+  clear: both;
+}
+.u-clearfix {
+  *zoom: 1;
+}
+.subtle {
+  color: #aaa;
+}
+.card-container {
+  margin: 25px auto 0;
+  position: relative;
+  width: 400px;
+}
+.card {
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  z-index: 1;
+}
+.card-body {
+  display: inline-block;
+  width: 310px;
+}
+.card-author {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  margin: 15px 0 0;
+  text-transform: uppercase;
+}
+.card-title {
+  font-family: "Amatic SC", cursive;
+  font-size: 60px;
+  font-weight: 300;
+  line-height: 60px;
+  margin: 10px 0;
+}
+.card-description {
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+}
+.card-read {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 5px 0 25px;
+  position: relative;
+  text-align: right;
+  text-transform: uppercase;
+}
+.card-read:after {
+  background-color: #b8bddd;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 9px;
+  width: 75%;
+}
+.card-tag {
+  float: right;
+  margin: 5px 0 0;
+}
+.card-media {
+  float: center;
+}
+
+.card-shadow {
+  background-color: #fff;
+  box-shadow: 0 2px 25px 2px rgba(0, 0, 0, 1), 0 2px 50px 2px rgba(0, 0, 0, 1),
+    0 0 100px 3px rgba(0, 0, 0, 0.25);
+  height: 1px;
+  margin: -1px auto 0;
+  width: 80%;
+  z-index: -1;
+}
