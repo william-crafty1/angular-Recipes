@@ -1,12 +1,47 @@
-<app-header></app-header>
-<div class="container">     
-    <div class="row">
-        <div
-        *ngFor="let favorite of getFavoriteRecipes()">
-                <img class="recipe-image" [src]="favorite.recipe.image" alt= "recipeImage" style="width:100%">  
+<div *ngIf="!showDetail">
+    <app-header></app-header>
+    <div class="container">
+        <div class="row">
+            <div *ngFor="let favorite of getFavoriteRecipes()">
+                <img class="recipe-image" [src]="favorite.recipe.image" alt="recipeImage" style="width:100%"
+                    (click)="displayDetail(favorite)">
                 <h5>{{favorite.recipe.label}}</h5>
-                <a class="recipe-link" [href]="favorite.recipe.url">Click for full recipe</a>
-            
+                <div class="recipe-text">
+                    <a class="recipe-link" [href]="favorite.recipe.url">Click for full recipe</a>
+                    <a class=" " title="Heart" (click)="removeFavorite(favorite)"> X </a>
+                </div>
+
+            </div>
         </div>
+
+
     </div>
+</div>
+
+
+<div *ngIf="showDetail" class="recipe-container">
+    <button (click)="showDetail = false">X</button>
+
+    <div class="card-container">
+        <div class="card u-clearfix">
+            <div class="card-body">
+                <h2 class="card-title">{{ selectedRecipe.label }} <img class="card-media" [src]="selectedRecipe.image"
+                        alt="recipeImage" style="width:80%"></h2>
+
+                <span class="card-description subtle">
+                    <p>Calories: {{ selectedRecipe.calories | number }}</p>
+                    <h6>Ingredients</h6>
+                    <div *ngFor="let ingredients of selectedRecipe.ingredientLines">
+                        <p>{{ ingredients }}</p>
+                    </div>
+                    <a class="recipe-link" [href]="selectedRecipe.url">Click for full recipe</a>
+                </span>
+                <div class="card-read"> Time:
+                    <p> {{ selectedRecipe.totalTime }} min</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-shadow"></div>
+    </div>
+
 </div>

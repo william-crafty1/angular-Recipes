@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
+.container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .search-input { 
     padding-top: 10px;
     font-family: 'Amatic SC', cursive;
@@ -25,14 +31,3 @@
     background-color: silver;
     color: black;
 }
-
-/* .btn.btn-primary :hover { 
-    background-color: black;
-    color: white;
-} */
-
-
-/* the health label dropdowns */
-/* .form-group { 
-    width: 75%;
-} */
