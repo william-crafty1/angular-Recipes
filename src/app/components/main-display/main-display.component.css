@@ -1,15 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
 .container {
-    font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   text-align: center;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
+
 .col-md-4 {
   text-align: center;
 }
 
 .container.recipes {
   padding-top: 15px;
+}
+
+h1 { 
+  padding: 0; 
+  margin: 0;
 }
 
 /* featured recipes text */
@@ -27,6 +35,8 @@ h5 {
 p {
   font-style: italic;
   font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
 
 /*Recipe Link*/
@@ -36,7 +46,6 @@ p {
 
 /*Recipe Link*/
 .recipe-link {
-
   text-decoration: none;
   color: silver;
   padding-top: 15px;
@@ -53,7 +62,6 @@ p {
   justify-content: center;
   flex-direction: row;
 }
-
 
 a.icon {
   margin: 12px;
@@ -193,7 +201,6 @@ a.heart:before {
 .card-media {
   float: center;
 }
-
 
 .card-shadow {
   background-color: #fff;

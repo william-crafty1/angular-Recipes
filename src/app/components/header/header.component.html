@@ -22,22 +22,10 @@
         <li class="nav-item">
         <a class="nav-link" [routerLink]="['/favorite-recipes']">Favorite Recipes</a>
         </li>
-        <li class="nav-item">
-        <a  class="nav-link" id="navLink-search" (click)="onToggleThought()">Search</a>
-        </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-    <a class="nav-link"
-    (click)="onToggleThought()">
-        <span class="material-icons search">search</span>
-    </a>
-    </form>
     </div>
 </nav>
-<div class="search-list">
-    <app-search-form
-    *ngIf="thoughtForm"></app-search-form>
-</div>
+
 
 
 <router-outlet></router-outlet>

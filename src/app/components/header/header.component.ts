@@ -8,7 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   navbarOpen = false;
-  thoughtForm = false;
 
   constructor() { }
 
@@ -17,14 +16,6 @@ export class HeaderComponent implements OnInit {
 
   toggleNavbar() {
     this.navbarOpen = !this.navbarOpen;
-  }
-
-  onSearch() { 
-    console.log();
-  }
-
-  onToggleThought() { 
-    this.thoughtForm = !this.thoughtForm; 
   }
 
 }

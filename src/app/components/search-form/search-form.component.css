@@ -1,33 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
 
-.container { 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.search-input { 
-    padding-top: 10px;
-    font-family: 'Amatic SC', cursive;
+.search-input {
+  padding-top: 10px;
+  font-family: "Amatic SC", cursive;
 }
 
-.input-group.mb-3.search-input { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+.input-group.mb-3.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
 }
 
-.form-control,
+.form-control {
+  width: 100%;
+  padding: 8px;
+}
+
+.form-control.input {
+  font-size: 25px;
+}
+
 .form-group.col-mod {
-    width: 100%;
-    padding: 8px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.btn.btn-primary { 
-    font-family: 'Amatic SC', cursive;
-    border: 1px solid silver;
-    background-color: silver;
-    color: black;
+#exampleFormControlSelect1 {
+  font-size: 18px;
+  width: 300%;
+}
+
+.button {
+  background-color: #ecc9b8;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  font-size: 20px;
+  margin: 4px 2px;
+  opacity: 0.8;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 1;
 }
