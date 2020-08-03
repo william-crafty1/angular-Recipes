@@ -14,6 +14,7 @@ body {
     text-decoration: none;
     color: silver;
     padding-top: 15px;
+    margin-right: 10px;
   }
   
   .recipe-link:hover {
@@ -55,6 +56,7 @@ body {
     height: 15px;
     margin-right: 24px;
     width: 15px;
+    color: burlywood;
   }
   a.heart:after {
     border-radius: 100%;
@@ -63,6 +65,7 @@ body {
     top: -2px;
     width: 15px;
     z-index: -1;
+    color: burlywood;
   }
   a.heart:before {
     border-left: none;
@@ -76,6 +79,7 @@ body {
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
+    color: burlywood;
   }
   
   /* recipe card */
@@ -112,7 +116,6 @@ body {
   }
   .card-body {
     display: inline-block;
-    float: left;
     width: 310px;
   }
   .card-author {

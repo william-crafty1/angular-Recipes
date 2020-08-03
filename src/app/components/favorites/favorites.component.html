@@ -2,13 +2,13 @@
     <app-header></app-header>
     <div class="container">
         <div class="row">
-            <div *ngFor="let favorite of getFavoriteRecipes()">
-                <img class="recipe-image" [src]="favorite.recipe.image" alt="recipeImage" style="width:100%"
+            <div *ngFor="let favorite of getFavoriteRecipes(favorite)">
+                <img class="recipe-image" [src]="favorite.recipe.image" alt="recipeImage" width = "300px" height= "200px"
                     (click)="displayDetail(favorite)">
                 <h5>{{favorite.recipe.label}}</h5>
                 <div class="recipe-text">
                     <a class="recipe-link" [href]="favorite.recipe.url">Click for full recipe</a>
-                    <a class=" " title="Heart" (click)="removeFavorite(favorite)"> X </a>
+                    <a class="heart" title="Heart" (click)="removeFavorite(favorite)"><i class="fas fa-heart-broken"></i></a>
                 </div>
 
             </div>

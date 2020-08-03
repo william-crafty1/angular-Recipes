@@ -16,9 +16,12 @@ export class FavoritesComponent implements OnInit {
     this.showDetail = false;
   }
 
-  getFavoriteRecipes() { 
+  getFavoriteRecipes(favorite: any) { 
     console.log(this.recipeService.favoriteRecipes);
-    return this.recipeService.favoriteRecipes;
+    let uniqueRecipes = this.recipeService.favoriteRecipes.filter((c, index) => {
+      return this.recipeService.favoriteRecipes.indexOf(c) === index;
+  });
+    return uniqueRecipes;
   }
 
   displayDetail(recipe: any) { 

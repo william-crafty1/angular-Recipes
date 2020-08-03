@@ -62,6 +62,7 @@ a.icon {
   display: inline-block;
   position: relative;
   vertical-align: top;
+  cursor: pointer;
 }
 a.icon:after,
 a.icon:before {
@@ -69,11 +70,13 @@ a.icon:before {
   border: 2px solid #fc6;
   content: "";
   position: absolute;
+  cursor: pointer;
 }
 a.icon:hover,
 a.icon:hover:after,
 a.icon:hover:before {
   background-color: #ffe;
+  cursor: pointer;
 }
 /* Heart Icon */
 a.heart {
@@ -81,6 +84,7 @@ a.heart {
   height: 15px;
   margin-right: 24px;
   width: 15px;
+  cursor: pointer;
 }
 a.heart:after {
   border-radius: 100%;
@@ -89,6 +93,7 @@ a.heart:after {
   top: -2px;
   width: 15px;
   z-index: -1;
+  cursor: pointer;
 }
 a.heart:before {
   border-left: none;
@@ -102,6 +107,7 @@ a.heart:before {
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
+  cursor: pointer;
 }
 
 /* recipe card */
