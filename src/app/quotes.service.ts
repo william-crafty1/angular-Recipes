@@ -18,23 +18,23 @@ export class QuotesService {
       "source": "Gordon Ramsey"
     },
     {
-      "quote": "This is a really tough decision… ’cause you’re both crap",
+      "quote": "This is a really tough decision… ’cause you’re both crap.",
       "source": "Gordon Ramsey"
     },
     {
-      "quote": "Hey, come here. Let me whisper something very important in your ear, very important: Fuck off. Get out.",
+      "quote": "Honestly, chimichanga... chimi chuck it in the bin.",
       "source": "Gordon Ramsey"
     },
     {
-      "quote": "I have to laugh when someone calls me an asshole. I’ve been called way worse.",
+      "quote": "I'm Gordon Ramsay, for goodness sake: people know I'm volatile.",
       "source": "Gordon Ramsey"
     },
     {
-      "quote": "I just want to die and fuck off to heaven with my filet steak.",
+      "quote": "For what we're about to eat, may the Lord make us truly not vomit.",
       "source": "Gordon Ramsey"
     },
     {
-      "quote": "You added so much salt and pepper, I can hear the dish signing push it",
+      "quote": "I have never ever, ever, ever met someone I believe in as little as you.",
       "source": "Gordon Ramsey"
     }
   ];
